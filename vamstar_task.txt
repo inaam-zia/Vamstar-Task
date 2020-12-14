@@ -1,0 +1,34 @@
+//Extracting Publication Date
+
+publication_class = document.getElementsByClassName("col-sm-6 lbl-licitacao");
+
+publication_field_value = publication_class[0].getElementsByTagName('font');
+
+publication_field_date = publication_field_value[3].textContent;
+
+
+//Extracting Object field
+
+object_field = document.getElementsByTagName("p");
+
+object_field_value = object_field[0].textContent;
+
+
+
+// Extracting the value of bidding 
+
+bidding_field = document.getElementsByClassName('col-sm-6 lbl-licitacao');
+
+bidding_field_font = bidding_field[3].getElementsByTagName("font");
+
+bidding_field_font_value = bidding_field_font[3].textContent;
+
+
+//display all the links in the page
+
+var x = document.links;
+var txt = "";
+var i;
+for (i = 0; i < x.length; i++) {
+  txt = txt + x[i].href + "<br>";
+}
